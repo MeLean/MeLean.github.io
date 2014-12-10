@@ -1,0 +1,27 @@
+﻿ ul, li {
+        list-style-type: none;
+    }
+
+    li {
+        padding-left: 0;
+        margin-left: 0;
+    }
+    li button {
+        margin-right: 3px;
+    }
+
+    .hideItem-button {
+        border: none;
+        width: 16px;
+        height: 16px;
+        background: url(../images/buttonUp.png) no-repeat;
+        cursor: pointer;
+    }
+
+    .showItem-button {
+        border: none;
+        width: 16px;
+        height: 16px;
+        background: url(../images/buttonDown.png) no-repeat;
+        cursor: pointer;
+    }
