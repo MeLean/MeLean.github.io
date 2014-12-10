@@ -2,7 +2,7 @@
 
     // includes css file
     $('head')
-        .append('<link rel="stylesheet" href="css/_01_TreeViewStyle.css" type="text/css" />');
+        .append('<link rel="stylesheet" href="css/treeViewStyle.css" type="text/css" />');
     
     // adds a buttons in front of list items
     $(function () {
