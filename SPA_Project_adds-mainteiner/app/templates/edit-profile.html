@@ -1,0 +1,70 @@
+﻿<div data-ng-controller="EditProfileController" class="row">
+    <form class="form-horizontal col-md-offset-1 col-md-10 col-sm-offset-0 col-sm-12 col-xs-12 text-center" id="register-form" name="registerForm">
+        <div class="row">
+            <div class="col-md-6">
+                <fieldset>
+                    <legend>Edit Profil</legend>
+                    <div class="jumbotron">
+                        <div>
+                            <label for="name" class="control-label pull-left">Name</label>
+                            <div>
+                                <input data-ng-model="user.name" type="text" required="required" class="form-control" id="name" placeholder="Enter name">
+                            </div>
+
+                            <label for="email" class="control-label pull-left">Email</label>
+                            <div>
+                                <input data-ng-model="user.email" type="text" required="required" class="form-control" id="email" placeholder="Enter email">
+                            </div>
+
+                            <label for="phoneNumber" class="control-label pull-left">Phone</label>
+                            <div>
+                                <input data-ng-model="user.phoneNumber" type="text" class="form-control" id="phoneNumber" placeholder="Enter phone">
+                            </div>
+                            <div>
+                                <label for="town-list" class="control-label pull-left">Select Town: </label>
+                                <select data-ng-model="user.townId" id="town-list" class="form-control" data-ng-change="updateAds(categoryFilter, townFilter, startPage, adsPerPage)"
+                                        data-ng-options="town.id as town.name for town in towns"></select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="buttons-holder">
+                                <button data-ng-click="updateUser(user)" class="btn btn-primary">
+                                    Update
+                                </button>
+                                <a href="#/user/home">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="col-md-6">
+                <fieldset>
+                    <legend>Change Password</legend>
+                    <div class="jumbotron">
+                        <label for="old-password" class="control-label pull-left">Old Password</label>
+                        <div>
+                            <input data-ng-model="password.oldPassword" type="password" class="form-control" id="old-password" placeholder="Enter old Password">
+                        </div>
+                        <label for="new-password" class="control-label pull-left">New Password</label>
+                        <div>
+                            <input data-ng-model="password.newPassword" type="password" class="form-control" id="new-password" placeholder="Enter new password">
+                        </div>
+
+                        <label for="repeat-new-password" class="control-label pull-left">Repeat New Password</label>
+                        <div>
+                            <input data-ng-model="password.confirmPassword" type="password" class="form-control" id="repeat-new-password" placeholder="Repeat new password">
+                        </div>
+                        <div class="form-group row">
+                            <div class="buttons-holder">
+                                <button data-ng-click="changePassword(password)" class="btn btn-primary">
+                                    Change Password
+                                </button>
+                                <a href="#/user/home">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </form>
+</div>

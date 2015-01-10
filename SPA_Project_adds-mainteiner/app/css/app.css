@@ -1,0 +1,80 @@
+﻿body {
+    background: lightgreen;
+}
+
+footer {
+    text-align: center;
+}
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none;
+}
+.img-circle {
+  width: 200px;
+  height: 150px;
+} 
+
+#main-view {
+    margin-top: 6.5%;
+}
+
+#header-contain {
+    text-align: center;
+}
+
+.ads-holder {
+    border: solid 2px lightseagreen;
+    padding: 0.6em;
+    margin: 1em;
+    border-radius: 0.5em;
+}
+
+.buttons-holder {
+    margin-top: 5%;
+}
+.navbar-fixed-top {
+    padding: 0 0.5%;
+}
+#filter-category, #filter-town, #page-change {
+   margin-top: 13px;
+   border: 0;
+   color: black;
+   background: transparent;
+}
+#filter-category>.label, #filter-town>.label, #page-change>.label{
+    font-size: 1em;
+}
+.nav-filter, .nav-page {
+    padding: 0.2em;
+    line-height: 1.2em;
+    border-radius: 0.2em;
+    background-color: transparent;
+    color: #111;
+    font-size: 1em;
+    -webkit-appearance: none;
+    box-shadow: inset 0 0 10px 0 rgba(0,0,0,0.6);
+    outline: none;
+}
+    .nav-filter:hover, .nav-page:hover {
+        color: lightgreen;
+        cursor: pointer;
+    }
+
+.nav-filter {
+    width: 100px;
+}
+.nav-page {
+    width: 34px;
+}
+
+.centered-text {
+    text-align: center;
+}
+.image-box img{
+    width:100%;
+    height: 200px;
+}
+
+#status-filter {
+    line-height: 2em;
+}
+

@@ -1,0 +1,6 @@
+G:\SotUni\AngularJS\SPA_Project_adds-mainteiner\SPA_Project_adds-mainteiner\bin\SPA_Project_adds-mainteiner.dll.config
+G:\SotUni\AngularJS\SPA_Project_adds-mainteiner\SPA_Project_adds-mainteiner\bin\SPA_Project_adds-mainteiner.dll
+G:\SotUni\AngularJS\SPA_Project_adds-mainteiner\SPA_Project_adds-mainteiner\bin\SPA_Project_adds-mainteiner.pdb
+G:\SotUni\AngularJS\SPA_Project_adds-mainteiner\SPA_Project_adds-mainteiner\obj\Debug\SPA_Project_adds-mainteiner.csprojResolveAssemblyReference.cache
+G:\SotUni\AngularJS\SPA_Project_adds-mainteiner\SPA_Project_adds-mainteiner\obj\Debug\SPA_Project_adds-mainteiner.dll
+G:\SotUni\AngularJS\SPA_Project_adds-mainteiner\SPA_Project_adds-mainteiner\obj\Debug\SPA_Project_adds-mainteiner.pdb

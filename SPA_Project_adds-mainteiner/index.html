@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>My ads portal</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="app/lib/bootsrap_3.1.1/css/bootstrap.css" rel="stylesheet" />
+        <link href="app/lib/bootsrap_3.1.1/css/bootstrap-theme.min.css" rel="stylesheet" />
+        <link href="app/css/app.css" rel="stylesheet" />
+    </head>
+
+<body data-ng-app="adsApp" data-ng-controller="MainController" >
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse navbar-inverse-collapse">
+            <div class="row">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/">Home</a></li>
+                    <li><a href="#/login-form" data-ng-hide="checkForLogin()">Login</a></li>
+                    <li><a href="#/register-form" data-ng-hide="checkForLogin()">Register</a></li>
+                    <li data-ng-cloak class="hidden-sm"><a href="" target="self">Wellcome, {{username()}}</a></li>
+                    <li><a href="#/" data-ng-show="checkForLogin()" ng-controller="LogoutController" data-ng-click="logout()">Logout</a></li>
+                    <li>
+                        <div id="filter-category">
+                            <div class="label">Category filter: </div>
+                            <select data-ng-model="categoryFilter" id="select-categories" class="nav-filter" data-ng-change="updateAds(categoryFilter, townFilter, startPage, adsPerPage)"
+                                    data-ng-options="category.id as category.name for category in categories">
+                                <option value="" data-ng-if="true">All</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="filter-town">
+                            <div class="label">Town filter: </div>
+                            <select data-ng-model="townFilter" id="select-towns" class="nav-filter" data-ng-change="updateAds(categoryFilter, townFilter, startPage, adsPerPage)"
+                                    data-ng-options="town.id as town.name for town in towns">
+                                <option value="" data-ng-if="true">All</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="page-change" data-ng-cloack>
+                            <div class="label">Page: </div>
+                            <select data-ng-model="startPage" id="select-pages" class="nav-page" data-ng-change="updateAds(categoryFilter, townFilter, startPage, adsPerPage)"
+                                    data-ng-options="page as page for page in pagesArr">
+                                <option value="" data-ng-if="false"></option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="" target="self" class="dropdown-toggle" data-toggle="dropdown">Tools<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#/user/ads">My Ads</a></li>
+                            <li><a href="#/user/ads/publish">Publish New Ad</a></li>
+                            <li class="divider"></li>
+                            <li>
+                                <form class="navbar-form">
+                                    <input data-ng-model="adsPerPage" class="form-control" placeholder="Ads number per page" type="text"
+                                           data-ng-change="updateAds(categoryFilter, townFilter, startPage, adsPerPage)">
+                                </form>
+                            </li>
+                            <li>
+                                <form class="navbar-form">
+                                    <input data-ng-model="fiterByText" class="form-control" placeholder="Type text to filter adds" type="text">
+                                </form>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="#/user/profile">Edit Profile</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="messageBox"></div>
+    <div class="container-fluid" data-ng-view id="main-view"></div>
+    <footer>© 2014 by Software University Foundation, No Rights Reserved</footer>
+    <script src="app/lib/jQuery/jquery-2.1.1.min.js"></script>
+    <script src="app/lib/bootsrap_3.1.1/js/bootstrap.js"></script>
+    <script src="app/lib/angularJS/angular_1.3.8.js"></script>
+    <script src="app/lib/angularJS/angular-route.js"></script>
+    <script src="app/lib/angularJS/angular-loacal-storage_1.1.5.js"></script>
+    <script src="app/lib/notify.js"></script>
+    <script src="app/js/app.js"></script>
+    <script src="app/js/controllers/mainController.js"></script>
+    <script src="app/js/controllers/RegisterController.js"></script>
+    <script src="app/js/controllers/LoginController.js"></script>
+    <script src="app/js/controllers/LogoutController.js"></script>
+    <script src="app/js/controllers/PublishAdController.js"></script>
+    <script src="app/js/controllers/UserAdsController.js"></script>
+    <script src="app/js/controllers/EditProfileController.js"></script>
+    <script src="app/js/controllers/EditAdController.js"></script>
+    <script src="app/js/controllers/DeleteAdController.js"></script>
+    <script src="app/js/services/requestManager.js"></script>
+    <script src="app/js/services/messaging.js"></script>
+    <script src="app/js/services/authentification.js"></script>
+</body>
+</html>
